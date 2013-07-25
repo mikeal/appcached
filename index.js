@@ -51,6 +51,4 @@ function appcached (resources, opts, cb) {
   })
 }
 
-appcached('http://staging.getable.com/app', {network:['/engine.io', '/api']}, function (e, manifest) {
-  console.log(manifest)
-})
+module.exports = appcached
