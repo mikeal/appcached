@@ -47,6 +47,9 @@ function appcached (resources, opts, cb) {
     cb(null, mkmanifest(opts))
   })
   touching.on('resp', function (resp) {
+    // DO NOT EVER CACHE A CACHE MANIFEST
+    if (resp.headers['content-type'] && resp.headers['content-type'] === 'text/cache-manifest') return
+    if (resp.request.href.slice(resp.request.href.length, '.appcache'.length) === '.appcache') return
     etags[resp.request.href] = hash(resp.body)
   })
 }
