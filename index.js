@@ -41,7 +41,6 @@ function appcached (resources, opts, cb) {
   cb = once(cb)
   var touching = webtouch(resources, function (e, urls) {
     if (e) return cb(e)
-    etags = _.omit(etags, resources)
     if (!opts.md5) opts.md5 = hash(_.values(etags).sort().join(''))
     opts.cache = opts.cache.concat(_.keys(etags))
     cb(null, mkmanifest(opts))
