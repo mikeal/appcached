@@ -54,7 +54,3 @@ function appcached (resources, opts, cb) {
 }
 
 module.exports = appcached
-
-appcached('http://staging.getable.com/app', function (e, manifest) {
-  console.log(manifest)
-})
