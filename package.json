@@ -1,6 +1,6 @@
 {
   "name": "appcached",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Scrape a site's required resources to dynamically generate an appcache manifest.",
   "main": "index.js",
   "dependencies": {
