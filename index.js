@@ -25,7 +25,7 @@ function mkmanifest (opts) {
     lines.push('FALLBACK:')
     lines = lines.concat(zipobj(opts.fallback))
   }
-  return lines.join('\n')
+  return lines.join('\r\n')
 }
 
 function appcached (resources, opts, cb) {
@@ -54,3 +54,7 @@ function appcached (resources, opts, cb) {
 }
 
 module.exports = appcached
+
+appcached('http://staging.getable.com/app', function (e, manifest) {
+  console.log(manifest)
+})
