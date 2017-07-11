@@ -4,9 +4,9 @@
   "description": "Scrape a site's required resources to dynamically generate an appcache manifest.",
   "main": "index.js",
   "dependencies": {
-    "lodash": "~1.3.1",
-    "once": "~1.1.1",
-    "webtouch": "^0.5.1"
+    "lodash": "~4.17.4",
+    "once": "~1.4.0",
+    "webtouch": "^0.7.0"
   },
   "devDependencies": {},
   "scripts": {
